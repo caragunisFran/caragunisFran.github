@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head> 
+<meta charset="UTF-8">   
+<link rel="stylesheet" type="text/css" href="MC.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+<script src="MC.js"></script>   
+</head>
+
+<body class="fondo">
+<div class="todo">
+    <div class="titulo">
+        ¿Quién dijo? ¿quién dijo?
+    </div>
+    <div class="explicacion">
+        Solamente tenes que contestar quién dijo cada frase. Facil. Tranqui.
+    </div>
+    <div ng-app="CounterApp">
+        <div ng-controller="CounterController" class="juego">
+            <div class="cuadradCFK">
+                <button ng-click="UNO()" id="botonCFK"></button>
+            </div> 
+            <div class="rectangulo">
+                <div class="textos">
+                    <p>Puntaje: {{counter}}</p>
+                </div>
+                <div class="textos">
+                    <p>{{frases[counter][0]}}</p>
+                </div>
+                <div class="textos">
+                    <p>{{estado}}</p>
+                </div>
+                <div id="jugarOtraVez">
+                    <button ng-click="jugar()" class="botonReinicio">Jugar otra vez</button>
+                </div>
+            </div>
+            <div class="cuadradoMM">
+                <button ng-click="CERO()" id="botonMM"></button>
+            </div>
+        </div>
+    </div>
+    <div class="pie">
+        Puto el que lee. <sup>®</sup>
+    </div>
+</div>
+</body>
+</html>
